@@ -1,0 +1,4 @@
+Total errors : 995
+Mozilla errors : 951
+Mozilla Compatibility Errors : 765
+Mozilla Compatibility Errors for iPhone : 44

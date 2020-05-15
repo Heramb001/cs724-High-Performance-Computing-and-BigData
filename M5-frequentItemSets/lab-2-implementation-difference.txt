@@ -1,0 +1,17 @@
+Please review the codes for both implementations and explain the difference in both implementations. 
+Also, indicate why you will use one over the other.
+Please submit your explanation as a text file and it should ot be more than a page.
+-------------- Answer --------------
+Code used in Lab Exercise 1 is basically implementation of the Naïve algorithm to finding frequent pairs for a given input file of values. This 
+Naïve approach involves finding frequent pairs by reading file once and counting each pair occurrences in the main memory. 
+Find count for all possible pairs and generate all possible pairs for items in the basket and update count for each pair. The main disadvantage of this is the 
+Main Memory bottleneck, this occurs as the counting is limited by main memory and swapping the counts in and out will be a critical operation. 
+
+If a 1D array is used to keep track of counts of all possible pairs i.e (n*n-1)/2 could need around 20 GB of memory. 
+
+To overcome this bottleneck, an efficient way was demonstrated in the Lab Exercise 2 which is a A-Priori algorithm running in two passes. 
+This algorithm limits the need for main memory. 
+In first pass it required memory proportional to number of items and in second pass tracks count of candidate pairs, read baskets and count in main memory only those are frequent.
+As there is need for parallel algorithm, SON algorithm is used and we could see the implementation in Lab Exercise 2. 
+The map and reduce in two phases computes the frequent items in a large collection of baskets within two passes and also handles the main memory issues and effectively uses the main memory.
+So, the SON implementation is preferred over the naïve approach.
